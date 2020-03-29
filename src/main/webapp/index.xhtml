@@ -12,7 +12,15 @@
 </h:head>
 <h:body>
     <h1>Hello World PrimeFaces</h1>
-    <h:outputText value="${itemView.text}"/>
+
+    <ul>
+        <c:forEach items="#{orderView.orders}" var="order">
+            <h:outputText value="Serial number:"/>
+            <h:outputText value="#{order.customerName}"/>
+            <hr/>
+        </c:forEach>
+    </ul>
+
     <ul>
         <c:forEach items="#{itemView.items}" var="item">
             <h:outputText value="Serial number:"/>

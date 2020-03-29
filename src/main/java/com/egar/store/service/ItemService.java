@@ -22,7 +22,6 @@ public class ItemService implements Serializable {
 
     public List<Item> getItems() throws Exception {
         List<Item> items = parser.parseItems(itemsFileName).getItems();
-        log.debug("///Items loaded////");
         return items;
     }
 }

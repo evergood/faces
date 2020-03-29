@@ -14,7 +14,6 @@ import java.util.List;
 @SessionScoped
 public class ItemView implements Serializable {
 
-    private String text = "hail satan";
     private List<Item> items;
 
     @Inject
@@ -23,14 +22,9 @@ public class ItemView implements Serializable {
     @PostConstruct
     public void init() throws Exception {
         items = itemService.getItems();
-        System.out.println(items);
     }
 
     public List<Item> getItems() {
         return items;
-    }
-
-    public String getText() {
-        return text;
     }
 }
