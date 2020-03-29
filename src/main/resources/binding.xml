@@ -1,11 +1,11 @@
 <binding>
-    <mapping name="item_pack" class="com.egar.store.com.egar.store.domen.ItemPack">
+    <mapping name="item_pack" class="com.egar.store.domen.ItemPack">
         <collection field="items" factory="org.jibx.runtime.Utility.arrayListFactory">
-            <structure name="item" type="com.egar.store.com.egar.store.domen.Item" ordered="false">
+            <structure name="item" type="com.egar.store.domen.Item" ordered="false">
                 <value style="attribute" name="serial_number" field="serialNumber"/>
                 <value name="name" field="name"/>
                 <value name="description" field="description"/>
-                <value name="date" field="manufactureDate"/>
+                <value name="date" field="manufactureDate" format = "SqlDate.default"/>
             </structure>
         </collection>
     </mapping>

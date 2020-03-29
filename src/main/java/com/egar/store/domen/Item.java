@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @Entity
@@ -22,7 +22,7 @@ public class Item {
     private String description;
 
     @Column(name = "manufacture_date")
-    private LocalDate manufactureDate;
+    private Date manufactureDate;
 
     @OneToOne(mappedBy = "item")
     private OrderDetail orderDetail;
