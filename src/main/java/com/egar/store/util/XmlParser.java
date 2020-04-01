@@ -10,7 +10,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 @Slf4j
-public class Parser {
+public class XmlParser {
 
     public ItemPack parseItems(String itemsFileName) throws Exception {
         IBindingFactory bfact = BindingDirectory.getFactory(ItemPack.class);

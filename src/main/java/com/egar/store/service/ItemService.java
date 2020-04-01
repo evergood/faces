@@ -1,7 +1,7 @@
 package com.egar.store.service;
 
 import com.egar.store.domen.Item;
-import com.egar.store.util.Parser;
+import com.egar.store.util.XmlParser;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -18,10 +18,10 @@ public class ItemService implements Serializable {
     String itemsFileName = "items.xml";
 
     @Inject
-    private Parser parser;
+    private XmlParser xmlParser;
 
     public List<Item> getItems() throws Exception {
-        List<Item> items = parser.parseItems(itemsFileName).getItems();
+        List<Item> items = xmlParser.parseItems(itemsFileName).getItems();
         return items;
     }
 }

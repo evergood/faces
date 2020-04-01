@@ -12,7 +12,7 @@
 </h:head>
 <h:body>
     <h1>Hello World PrimeFaces</h1>
-
+    <h3><h:outputText value="#{orderView.date.month}, #{orderView.date.dayOfMonth} #{orderView.date.year}"  /></h3>
     <ul>
         <c:forEach items="#{orderView.orders}" var="order">
             <h:outputText value="Serial number:"/>

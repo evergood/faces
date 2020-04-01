@@ -120,6 +120,11 @@
 			<artifactId>jul-to-slf4j</artifactId>
 			<version>1.7.30</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.xml.soap</groupId>
+			<artifactId>javax.xml.soap-api</artifactId>
+			<version>1.4.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
