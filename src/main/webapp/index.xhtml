@@ -21,12 +21,13 @@
                     <c:forEach items="#{order.orderDetails}" var="detail">
                         <h:outputText value="#{detail.rowId}. #{detail.serialNumber} #{detail.amount} pcs"/>
                         <hr/>
-                        <h:outputText value="#{itemView.getItemInfo(detail.serialNumber)}"/>
+                        <h:outputText id="info"  value="#{itemView.getItemInfo(detail.serialNumber)}"/>
                         <hr/>
                     </c:forEach>
                 </h:panelGrid>
             </p:panel>
         </c:forEach>
+        <p:commandButton update="info" value="Update goods info" />
     </h:form>
 </h:body>
 </html>
