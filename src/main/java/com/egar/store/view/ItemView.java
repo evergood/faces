@@ -27,4 +27,12 @@ public class ItemView implements Serializable {
     public List<Item> getItems() {
         return items;
     }
+
+    public Item getOrderDetailInfo(String serialNumber) throws Exception {
+        return itemService.getItemBySerialNumber(serialNumber);
+    }
+
+    public String getItemInfo(String serialNumber) throws Exception {
+        return itemService.getItemInfoBySerialNumber(serialNumber);
+    }
 }

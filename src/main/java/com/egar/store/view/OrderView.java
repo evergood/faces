@@ -34,4 +34,5 @@ public class OrderView implements Serializable {
     public LocalDateTime getDate() throws IOException, SOAPException {
         return orderService.getSoapDate();
     }
+
 }
